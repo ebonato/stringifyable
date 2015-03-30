@@ -1,0 +1,1 @@
+Small library for constructing functions so they can be meaningfully serialized.

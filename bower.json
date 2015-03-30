@@ -1,0 +1,15 @@
+{
+  "name": "stringifyable",
+  "main": "dist/stringifyable.js",
+  "description": "Small library for constructing functions so they can be meaningfully serialized.",
+  "authors": ["Ben Schulz (https://github.com/benschulz)"],
+  "license": "BSD-3-Clause",
+  "keywords": ["util"],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/benschulz/stringifyable.git"
+  },
+  "devDependencies": {
+    "onefold-js": "benschulz/onefold-js"
+  }
+}
