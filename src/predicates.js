@@ -25,11 +25,11 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
     var alwaysFalse = () => false;
     makePredicate(alwaysFalse);
-    makeStringifyable(alwaysFalse, () => ({type: 'always-false-predicate'}));
+    makeStringifyable(alwaysFalse, () => ({'type': 'always-false-predicate'}));
 
     var alwaysTrue = () => true;
     makePredicate(alwaysTrue);
-    makeStringifyable(alwaysTrue, () => ({type: 'always-true-predicate'}));
+    makeStringifyable(alwaysTrue, () => ({'type': 'always-true-predicate'}));
 
     function andPredicate(components) {
         if (!components.length)
@@ -56,9 +56,9 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
         makePredicate(result);
         makeStringifyable(result, () => ({
-            type: 'by-function-predicate',
-            function: fn.stringifyable,
-            predicate: predicate.stringifyable
+            'type': 'by-function-predicate',
+            'function': fn.stringifyable,
+            'predicate': predicate.stringifyable
         }));
 
         return result;
@@ -69,8 +69,8 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
         makePredicate(result, predicate);
         makeStringifyable(result, () => ({
-            type: 'negated-predicate',
-            predicate: predicate.stringifyable
+            'type': 'negated-predicate',
+            'predicate': predicate.stringifyable
         }));
 
         return result;
@@ -112,10 +112,10 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
             makePredicate(result);
             makeStringifyable(result, ()=>({
-                type: 'regular-expression-predicate',
-                regularExpression: regularExpression.source,
-                caseSensitive: !regularExpression.ignoreCase,
-                multiline: regularExpression.multiline
+                'type': 'regular-expression-predicate',
+                'regularExpression': regularExpression.source,
+                'caseSensitive': !regularExpression.ignoreCase,
+                'multiline': regularExpression.multiline
             }));
 
             return result;

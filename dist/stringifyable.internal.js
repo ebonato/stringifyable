@@ -56,9 +56,9 @@ stringifyable_comparators = function (js, makeStringifyable) {
     makeComparator(result);
     makeStringifyable(result, function () {
       return {
-        type: 'by-function-comparator',
-        function: fn.stringifyable,
-        comparator: comparator.stringifyable
+        'type': 'by-function-comparator',
+        'function': fn.stringifyable,
+        'comparator': comparator.stringifyable
       };
     });
     return result;
@@ -70,8 +70,8 @@ stringifyable_comparators = function (js, makeStringifyable) {
     makeComparator(result, comparator);
     makeStringifyable(result, function () {
       return {
-        type: 'reversed-comparator',
-        comparator: comparator.stringifyable
+        'type': 'reversed-comparator',
+        'comparator': comparator.stringifyable
       };
     });
     return result;
@@ -82,14 +82,14 @@ stringifyable_comparators = function (js, makeStringifyable) {
   };
   makeComparator(naturalComparator);
   makeStringifyable(naturalComparator, function () {
-    return { type: 'natural-comparator' };
+    return { 'type': 'natural-comparator' };
   });
   var indifferentComparator = function (a, b) {
     return 0;
   };
   makeComparator(indifferentComparator);
   makeStringifyable(indifferentComparator, function () {
-    return { type: 'indifferent-comparator' };
+    return { 'type': 'indifferent-comparator' };
   });
   return {
     indifferent: indifferentComparator,
@@ -117,8 +117,8 @@ stringifyable_functions = function (js, makeStringifyable) {
       makeFunction(fn);
       makeStringifyable(fn, function () {
         return {
-          type: 'property-accessor',
-          propertyName: propertyName
+          'type': 'property-accessor',
+          'propertyName': propertyName
         };
       });
       return fn;
@@ -187,14 +187,14 @@ stringifyable_predicates = function (js, makeStringifyable) {
   };
   makePredicate(alwaysFalse);
   makeStringifyable(alwaysFalse, function () {
-    return { type: 'always-false-predicate' };
+    return { 'type': 'always-false-predicate' };
   });
   var alwaysTrue = function () {
     return true;
   };
   makePredicate(alwaysTrue);
   makeStringifyable(alwaysTrue, function () {
-    return { type: 'always-true-predicate' };
+    return { 'type': 'always-true-predicate' };
   });
   function andPredicate(components) {
     if (!components.length)
@@ -223,9 +223,9 @@ stringifyable_predicates = function (js, makeStringifyable) {
     makePredicate(result);
     makeStringifyable(result, function () {
       return {
-        type: 'by-function-predicate',
-        function: fn.stringifyable,
-        predicate: predicate.stringifyable
+        'type': 'by-function-predicate',
+        'function': fn.stringifyable,
+        'predicate': predicate.stringifyable
       };
     });
     return result;
@@ -237,8 +237,8 @@ stringifyable_predicates = function (js, makeStringifyable) {
     makePredicate(result, predicate);
     makeStringifyable(result, function () {
       return {
-        type: 'negated-predicate',
-        predicate: predicate.stringifyable
+        'type': 'negated-predicate',
+        'predicate': predicate.stringifyable
       };
     });
     return result;
@@ -283,10 +283,10 @@ stringifyable_predicates = function (js, makeStringifyable) {
       makePredicate(result);
       makeStringifyable(result, function () {
         return {
-          type: 'regular-expression-predicate',
-          regularExpression: regularExpression.source,
-          caseSensitive: !regularExpression.ignoreCase,
-          multiline: regularExpression.multiline
+          'type': 'regular-expression-predicate',
+          'regularExpression': regularExpression.source,
+          'caseSensitive': !regularExpression.ignoreCase,
+          'multiline': regularExpression.multiline
         };
       });
       return result;

@@ -15,8 +15,8 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
             makeFunction(fn);
             makeStringifyable(fn, () => ({
-                type: 'property-accessor',
-                propertyName: propertyName
+                'type': 'property-accessor',
+                'propertyName': propertyName
             }));
 
             return fn;

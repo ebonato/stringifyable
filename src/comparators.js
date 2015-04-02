@@ -26,9 +26,9 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
         makeComparator(result);
         makeStringifyable(result, () => ({
-            type: 'by-function-comparator',
-            function: fn.stringifyable,
-            comparator: comparator.stringifyable
+            'type': 'by-function-comparator',
+            'function': fn.stringifyable,
+            'comparator': comparator.stringifyable
         }));
 
         return result;
@@ -39,8 +39,8 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
         makeComparator(result, comparator);
         makeStringifyable(result, () => ({
-            type: 'reversed-comparator',
-            comparator: comparator.stringifyable
+            'type': 'reversed-comparator',
+            'comparator': comparator.stringifyable
         }));
 
         return result;
@@ -54,13 +54,13 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
     };
     makeComparator(naturalComparator);
     makeStringifyable(naturalComparator, () => ({
-        type: 'natural-comparator'
+        'type': 'natural-comparator'
     }));
 
     var indifferentComparator = (a, b) => 0;
     makeComparator(indifferentComparator);
     makeStringifyable(indifferentComparator, () => ({
-        type: 'indifferent-comparator'
+        'type': 'indifferent-comparator'
     }));
 
     return {
