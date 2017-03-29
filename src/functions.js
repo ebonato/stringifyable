@@ -11,7 +11,7 @@ define(['onefold-js', './make-stringifyable'], function (js, makeStringifyable) 
 
     return {
         propertyAccessor: propertyName => {
-            var fn = owner => owner[propertyName];
+            var fn = owner => propertyName.indexOf('.') == -1 ? owner[propertyName] : eval('owner.'+ propertyName);
 
             makeFunction(fn);
             makeStringifyable(fn, () => ({
