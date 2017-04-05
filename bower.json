@@ -1,5 +1,5 @@
 {
-  "name": "stringifyable-ebonato",
+  "name": "stringifyable",
   "main": "dist/stringifyable.js",
   "description": "ebonato fork: Small library for constructing functions so they can be meaningfully serialized.",
   "authors": ["Eduardo Bonato (https://github.com/ebonato)"],

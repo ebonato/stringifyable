@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "stringifyable-ebonato",
+  "name": "stringifyable",
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "^0.4.5",
