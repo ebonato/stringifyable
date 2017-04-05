@@ -112,7 +112,7 @@ stringifyable_functions = function (js, makeStringifyable) {
   return {
     propertyAccessor: function (propertyName) {
       var fn = function (owner) {
-        return owner[propertyName];
+        return propertyName.indexOf('.') == -1 ? owner[propertyName] : eval('owner.' + propertyName);
       };
       makeFunction(fn);
       makeStringifyable(fn, function () {
